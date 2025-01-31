@@ -1,0 +1,217 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Yatay hizalama */
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #a5b6b0;
+}
+
+
+.login-container{
+  display: flex;
+  justify-content: center; /* Yatay hizalama */
+  align-items: center; /* Dikey hizalama */
+  height: 600px;
+  width: 900px;
+  background-color:#41504b;
+  border-radius: 10px;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.801);
+  
+}
+
+
+.login-left-container{
+  display: flex;
+  justify-content: center; /* Yatay hizalama */
+  align-items: center; /* Dikey hizalama */
+  width: 50%;
+  height: 100%;
+}
+
+.login-left-container img{
+  border-radius: 100%;
+  width: 90%;
+  object-fit: cover;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.801);
+
+}
+
+.login-right-container{
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Yatay hizalama */
+  width: 50%;
+  height: 100%;
+}
+
+.login-form{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Yatay hizalama */
+  align-items: center; /* Dikey hizalama */
+  background-color: #636d6a;
+  width: 80%;
+  height: 90%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.801);
+  
+}
+
+.login-form h1{
+  color: white;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+.login-form input{
+  width: 80%;
+  height: 40px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: #a5b6b0;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+}
+
+.login-form button{
+  width: 80%;
+  height: 40px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color:#242222;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+.register-container{
+  display: flex;
+  justify-content: center; /* Yatay hizalama */
+  align-items: center; /* Dikey hizalama */
+  height: 600px;
+  width: 900px;
+  background-color:#41504b;
+  border-radius: 10px;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.801);
+  
+}
+
+
+.register-left-container{
+  display: flex;
+  justify-content: center; /* Yatay hizalama */
+  align-items: center; /* Dikey hizalama */
+  width: 50%;
+  height: 100%;
+}
+
+.register-left-container img{
+  border-radius: 100%;
+  width: 90%;
+  object-fit: cover;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.801);
+
+}
+
+.register-right-container{
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Yatay hizalama */
+  width: 50%;
+  height: 100%;
+}
+
+.register-form{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Yatay hizalama */
+  align-items: center; /* Dikey hizalama */
+  background-color: #636d6a;
+  width: 80%;
+  height: 90%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.801);
+  
+}
+
+.register-form h1{
+  color: white;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+.register-form input{
+  width: 80%;
+  height: 40px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: #a5b6b0;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+}
+
+.register-form button{
+  width: 80%;
+  height: 40px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color:#242222;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .login-container, .register-container {
+    flex-direction: column;
+    height: auto;
+    padding: 25px;
+    width: 300px;
+  }
+
+  .login-left-container, .register-left-container,
+  .login-right-container, .register-right-container {
+    width: 100%; /* Tam genişlik */
+    height: auto;
+  }
+
+  .login-left-container img, .register-left-container img {
+    width: 60%; /* Mobilde daha büyük */
+    max-width: 250px;
+    padding: 10px;
+  }
+
+  .login-form, .register-form {
+    width: 100%; /* Mobilde daha fazla alan kaplasın */
+    max-width: 450px;
+  }
+}
+
