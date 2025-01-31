@@ -30,7 +30,6 @@ function Register() {
           });
       }
 
-        console.log("User Registered Succesfully!");
         //navigate("/login")
 
 
