@@ -13,7 +13,7 @@ function Login() {
             await signInWithEmailAndPassword(auth, email, password);
             console.log("User Logged in Successfully!");
             setTimeout(() => {
-                navigate("/dashboard");
+                navigate("/profile");
             }, 1000); // 1 saniye gecikme
         } catch (error) {
             console.error(error.message);
