@@ -201,6 +201,7 @@ body {
   .login-right-container, .register-right-container {
     width: 100%; /* Tam genişlik */
     height: auto;
+    padding: 10px;
   }
 
   .login-left-container img, .register-left-container img {
