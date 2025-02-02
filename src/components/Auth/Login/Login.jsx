@@ -25,6 +25,7 @@ function Login() {
           });
       }, []);
     const handleSubmit = async (e) => {
+        e.preventDefault();
         try {
             await signInWithEmailAndPassword(auth, email, password);
             console.log("User Logged in Successfully!");
@@ -35,13 +36,14 @@ function Login() {
             console.error(error.message);
             logError();
         } finally {
-            setSubmitting(false);
+            
         }
     };
 
 
 
   return (
+    <div className='login'>
     <div className='login-container'>
         <div className='login-left-container'>
             <img src={imageUrl} />
@@ -55,6 +57,7 @@ function Login() {
                 <p>Don't have an account? <Link to ="/register" >Register</Link></p>
             </form>
         </div>
+    </div>
     </div>
   )
 }

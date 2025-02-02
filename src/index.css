@@ -1,28 +1,38 @@
-:root {
+
+
+
+body {
+  background-color: #a5b6b0;
+  margin: 0;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
+
 }
 
 
-body {
-  margin: 0;
-  display: flex;
-  justify-content: center; /* Yatay hizalama */
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: #a5b6b0;
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+.register{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 
 .login-container{
@@ -216,3 +226,315 @@ body {
   }
 }
 
+
+
+nav {
+  padding: 5px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.801);
+  z-index: 1;
+  background-color: #636d6a;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  
+}
+
+nav .logo h1 {
+  font-size: 1.1rem;
+  background: rgb(20, 20, 24); 
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 15rem;
+
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin-right: 15rem;
+}
+nav ul li {
+  margin-top: 0.25rem  ;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 95%;
+  font-weight: 400;
+  padding: 4px 8px;
+  border-radius: 5px;
+  margin-right: 1.5rem;
+}
+
+nav ul li a:hover {
+  background-color: #87888b;
+}
+nav img {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  object-fit: cover;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.801);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 1px;
+  background-color: #1f1f1f;
+  display: block;
+  margin: 7px auto;
+  transition: all 0.3s ease-in-out;
+}
+.hamburger-active {
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.6s;
+  transform: rotate(45deg);
+}
+
+.hamburger-active .line:nth-child(2) {
+  width: 0px;
+}
+
+.hamburger-active .line:nth-child(1),
+.hamburger-active .line:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.hamburger-active .line:nth-child(1) {
+  transform: translateY(12px);
+}
+
+.hamburger-active .line:nth-child(3) {
+  transform: translateY(-5px) rotate(90deg);
+}
+
+.menubar {
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 73vh;
+  padding: 20% 0;
+  background: #383d3c;
+  transition: all 0.5s ease-in;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  text-align: center ;
+}
+.active {
+  left: 0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.menubar ul {
+  padding: 0;
+  list-style: none;
+  
+}
+.menubar ul li {
+  margin-bottom: 35px;
+}
+
+.menubar ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 95%;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 5px;
+  
+}
+
+.menubar ul li a:hover {
+  background-color: #87888b;
+}
+.menubar-img{
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  display: block;
+  margin: 0 auto; 
+  object-fit: cover;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.801);
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.profile-container{
+  display: flex;
+  justify-content: center; /* Yatay hizalama */
+  align-items: center; /* Dikey hizalama */
+  height: 300px;
+  width: 1250px;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.body-container{
+  display: flex;
+  justify-content: center; /* Yatay hizalama */
+  align-items: center; /* Dikey hizalama */
+  height: 300px;
+  width: 1250px;
+  background-color:#41504b;
+  border-radius: 10px;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.801);
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.friends-list{
+  background-color: #41504b;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.801);
+  margin: 0 auto;
+
+  
+}
+.friends-list h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+.something{
+  background-color: #41504b;
+  width: 910px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.801);
+  margin: 0 auto;
+}
+
+.something img{
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  object-fit: cover;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.801);
+
+}
+.something {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile-header img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.profile-header h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+.profile-header p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+.profile-info{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  
+ 
+}
+.profile-info p{
+  margin-left: 5rem;
+}
+.profile-stats{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem;
+  margin-bottom: auto;
+  gap: 1rem;
+  
+
+}
+.profile-stats p{
+ border : 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #a5b6b0;
+  color: black;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.801);
+  
+
+}
+.profile-body{
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media screen and (max-width: 790px) {
+  .hamburger {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+
+  .friends-list{
+    display: none;
+  }
+  .profile-header img{
+    width: 50px;
+    height: 50px;
+  }
+  .profile-header h1{
+    font-size: 1rem;
+  }
+  .profile-header p{
+    font-size: 0.8rem;
+  }
+
+}
+
+@media screen and (max-width: 1000px) {
+  nav .logo h1 {
+    margin-left: 0;
+  }
+  nav ul {
+    margin-right: 0;
+  }
+  nav img {
+    margin-right: 0;
+  }
+  .profile-container{
+    width: 95%;
+    height: 300px;
+  }
+  .body-container{
+    width: 95%;
+    height: 300px;
+    
+  }
+  .friends-list{
+    width: 215px;
+    height: 300px;
+  }
+  .something{
+    width: 675px;
+    height: 300px;
+  }
+
+}

@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react'
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate} from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth, db } from '../../../Firebase/Firebase';
 import { doc, setDoc } from 'firebase/firestore';
@@ -16,6 +16,7 @@ function Register() {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [imageUrl, setImageUrl] = useState(null);
+  const navigate = useNavigate();
   
  useEffect(() => {
         const storage = getStorage();
@@ -37,6 +38,8 @@ function Register() {
         const user = auth.currentUser;
         console.log(user);
         alert("User Created Successfully!");
+        navigate("/login");
+
 
         if (user) {
           await setDoc(doc(db, "Users", user.uid), {
@@ -60,6 +63,7 @@ function Register() {
 
 
   return (
+    <div className='register'>
     <div className='register-container'>
     <div className='register-left-container'>
         <img src={imageUrl} />
@@ -76,6 +80,7 @@ function Register() {
 
         </form>
     </div>
+</div>
 </div>
   )
 }
