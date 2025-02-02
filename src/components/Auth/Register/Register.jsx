@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth, db } from '../../../Firebase/Firebase';
 import { doc, setDoc } from 'firebase/firestore';
+import { getStorage, ref, getDownloadURL } from "firebase/storage";
+
+
 
 
 function Register() {
@@ -12,7 +15,20 @@ function Register() {
   const [password, setPassword] = useState("");
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
-
+  const [imageUrl, setImageUrl] = useState(null);
+  
+ useEffect(() => {
+        const storage = getStorage();
+        const imageRef = ref(storage, "logo.png"); // Resmin kayıtlı olduğu yol
+    
+        getDownloadURL(imageRef)
+          .then((url) => {
+            setImageUrl(url);
+          })
+          .catch((error) => {
+            console.error("Resim yüklenirken hata oluştu:", error);
+          });
+      }, []);
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -45,7 +61,7 @@ function Register() {
   return (
     <div className='register-container'>
     <div className='register-left-container'>
-        <img src="src\assets\logo.png" />
+        <img src={imageUrl} />
     </div>
     <div className='register-right-container'>
         <form onSubmit={handleRegister} className='register-form'>
