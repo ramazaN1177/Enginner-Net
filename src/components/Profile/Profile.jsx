@@ -46,21 +46,21 @@ function Profile() {
       <div className='profile-container'>   
         <div className="something">
          <div className="profile-header">
-         <img src="https://www.w3schools.com/w3images/mac.jpg"/>
-         <h1>{userDetails ? userDetails.firstname : 'Loading...'} {userDetails ? userDetails.lastname : 'Loading...'}</h1>
-         <p>Bilgisayar Mühendisi</p>
+            <img className='profile-img' src="https://www.w3schools.com/w3images/mac.jpg"/>
+            <h1>{userDetails ? userDetails.firstname : 'Loading...'} {userDetails ? userDetails.lastname : 'Loading...'}</h1>
+            <h2>Bilgisayar Mühendisi</h2>
          </div>
 
         <div className="profile-body">
-        <div className="profile-info">
-          <p>İstanbul / Turkey</p>
-          <p>Phone Number: 555 555 555</p>
-        </div>
-        <div className="profile-stats">
-          <p>Following - 85</p>
-          <p>Followers - 100</p>
-          <p>a</p>
-        </div>
+          <div className="profile-info">
+            <p>İstanbul / Turkey</p>
+            <p>Phone Number: 555 555 555</p>
+          </div>
+          <div className="profile-stats">
+            <p>Following - 85</p>
+            <p>Followers - 100</p>
+            <p>a</p>
+          </div>
         </div>
 
         </div>
